@@ -99,10 +99,11 @@ require('marko').setup({
   default_keymap = '"',
   
   -- Key mappings within popup
+  -- Can be a single key (string) or multiple keys (table of strings)
   keymaps = {
     delete = "d",
-    goto = "<CR>",
-    close = "<Esc>",
+    goto = { "<CR>", "o" }, -- Example of multiple keys
+    close = { "<Esc>", "q" },
   },
   
   -- Show marks from all buffers or just current buffer
